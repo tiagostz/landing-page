@@ -1,17 +1,20 @@
 <section class="form-section">
     <div class="text">
-        <h3>
-            Fique por dentro de tendências
-        </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eum dicta nostrum voluptates illo doloribus,
-            ut perferendis obcaecati culpa accusantium, rerum omnis eligendi, expedita distinctio voluptatem. Nihil
-            magni nostrum quia.</p>
+        <h3>Fique por dentro de tendências</h3>
+        <p>Receba dicas exclusivas sobre escalabilidade, performance e inovação em software diretamente no seu e-mail.</p>
     </div>
-    <form>
-        <label for="email">Name</label>
-        <input id="name"/>
-        <label for="email">Email</label>
-        <input id="email"/>
-        <btn-primary></btn-primary>
+    <form #newsletterForm="ngForm" (ngSubmit)="onSubmit(newsletterForm)" novalidate>
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" required [(ngModel)]="formData.name" placeholder="Seu nome"/>
+        <div *ngIf="newsletterForm.submitted && !formData.name" class="error">Nome é obrigatório.</div>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required [(ngModel)]="formData.email" placeholder="seu@email.com"/>
+        <div *ngIf="newsletterForm.submitted && !formData.email" class="error">E-mail é obrigatório.</div>
+        <div *ngIf="newsletterForm.submitted && formData.email && !isValidEmail(formData.email)" class="error">E-mail inválido.</div>
+
+        <btn-primary btn-text="Inscrever"></btn-primary>
+        <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
     </form>
 </section>

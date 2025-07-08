@@ -1,27 +1,71 @@
-# LandingPage
+# Kipper Consultoria - Landing Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.13.
+Landing page profissional para consultoria em software, focada em escalabilidade, performance e inovação.
 
-## Development server
+## ✨ Recursos
+- Design moderno, responsivo e acessível
+- Seção de benefícios em cards com ícones
+- Depoimentos de clientes
+- Formulário de newsletter funcional com validação
+- Rodapé informativo com contato e redes sociais
+- Otimização para SEO e performance
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tecnologias
+- [Angular](https://angular.io/) 16+
+- SCSS (Sass)
+- HTML5 semântico
 
-## Code scaffolding
+## 📁 Estrutura de Pastas
+```
+landing-page/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── home/           # Página principal
+│   │   │   ├── header/         # Cabeçalho
+│   │   │   ├── btn-primary/    # Botão principal reutilizável
+│   │   │   └── newsletter-form/# Formulário de newsletter
+│   ├── assets/                 # Imagens e ícones
+│   └── styles.scss             # Estilos globais
+├── angular.json
+├── package.json
+└── README.md
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠️ Instalação e Uso
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/landing-page.git
+   cd landing-page
+   ```
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+3. **Rode o projeto localmente:**
+   ```bash
+   npm start
+   # ou
+   ng serve
+   ```
+4. **Acesse:**
+   Abra [http://localhost:4200](http://localhost:4200) no navegador.
 
-## Build
+## 📦 Scripts úteis
+- `npm start` — inicia o servidor de desenvolvimento
+- `npm run build` — gera build de produção
+- `npm test` — executa os testes unitários
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 💡 Personalização
+- Edite os textos e imagens em `src/app/components/home/` e `src/assets/`.
+- Cores e variáveis em `src/color-variables.scss`.
+- Adicione integrações reais no formulário em `newsletter-form.component.ts`.
 
-## Running unit tests
+## 📞 Contato
+**Kipper Consultoria**  
+contato&#64;kipperconsultoria.com.br  
+WhatsApp: (11) 99999-9999
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Feito com ❤️ para empresas que querem crescer sem limites!

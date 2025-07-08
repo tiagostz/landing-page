@@ -78,3 +78,224 @@ main {
         
     }
 }
+
+@media (max-width: 767px) {
+  main {
+    gap: 40px;
+    padding: 0 16px;
+  }
+  .main-section {
+    h1 {
+      font-size: 2rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      margin-top: 8px;
+    }
+    img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      margin-top: 24px;
+    }
+  }
+  .benefit-section, .stat-section, .testimonial-section {
+    padding: 24px 0;
+    gap: 24px;
+    h2 {
+      font-size: 1.3rem;
+    }
+    ul.benefit-list {
+      padding-left: 18px;
+      font-size: 1rem;
+    }
+    .testimonials blockquote {
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px 18px;
+    font-weight: 500;
+    color: $primary-text;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+}
+
+.testimonial-section {
+  background: #fafbfc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    blockquote {
+      font-style: italic;
+      color: $secondary-text;
+      border-left: 4px solid $secondary-color;
+      padding-left: 16px;
+      margin: 0;
+    }
+    span {
+      font-size: 0.95rem;
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+}
+
+.footer-section {
+  background: #222;
+  color: #fff;
+  padding: 32px 0 12px 0;
+  margin-top: 32px;
+  font-size: 1rem;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  gap: 32px;
+}
+.footer-brand {
+  flex: 1 1 220px;
+}
+.footer-logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: $primary-color;
+}
+.footer-contact {
+  flex: 1 1 180px;
+  font-size: 1rem;
+}
+.footer-social {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  a {
+    color: #fff;
+    background: $primary-color;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    text-decoration: none;
+    &:hover {
+      background: $secondary-color;
+    }
+    svg {
+      display: block;
+    }
+  }
+}
+.footer-copy {
+  text-align: center;
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 12px;
+    gap: 18px;
+  }
+  .footer-section {
+    font-size: 0.98rem;
+    padding: 24px 0 8px 0;
+  }
+  .footer-logo {
+    font-size: 1.05rem;
+  }
+}
+
+.benefit-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: $primary-color;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+.benefit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+.benefit-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 28px 22px;
+  min-width: 220px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: $primary-text;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2px solid transparent;
+}
+.benefit-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  border-color: $primary-color;
+}
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  color: $primary-color;
+}
+@media (max-width: 900px) {
+  .benefit-cards {
+    gap: 18px;
+  }
+  .benefit-card {
+    min-width: 160px;
+    padding: 18px 10px;
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 600px) {
+  .benefit-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .benefit-card {
+    width: 100%;
+    max-width: 98vw;
+    min-width: unset;
+    font-size: 0.97rem;
+    padding: 14px 6px;
+  }
+  .benefit-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+}
