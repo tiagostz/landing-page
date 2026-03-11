@@ -1,0 +1,59 @@
+@import "../../../color-variables.scss";
+
+.app-header {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid $border-color;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    .header-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 800;
+        font-size: 18px;
+        letter-spacing: -0.5px;
+        color: #fff;
+        
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    nav {
+        display: flex;
+        gap: 24px;
+
+        a {
+            text-decoration: none;
+            color: $secondary-text;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+}

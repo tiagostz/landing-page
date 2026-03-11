@@ -1,0 +1,21 @@
+<section id="newsletter" class="newsletter-container">
+    <div class="newsletter-content">
+        <div class="newsletter-text">
+            <h3>Fique por dentro</h3>
+            <p>Receba tendências de escalabilidade e performance diretamente no seu e-mail.</p>
+        </div>
+        <form #newsletterForm="ngForm" (ngSubmit)="onSubmit(newsletterForm)" novalidate>
+            <div class="input-group">
+                <input id="name" name="name" type="text" required [(ngModel)]="formData.name" placeholder="Seu nome"/>
+                <input id="email" name="email" type="email" required [(ngModel)]="formData.email" placeholder="Seu e-mail"/>
+                <btn-primary btn-text="Inscrever" type="submit"></btn-primary>
+            </div>
+            
+            <div class="messages">
+                <div *ngIf="newsletterForm.submitted && (!formData.name || !formData.email)" class="error">Campos obrigatórios.</div>
+                <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+                <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+            </div>
+        </form>
+    </div>
+</section>

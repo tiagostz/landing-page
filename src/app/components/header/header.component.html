@@ -1,0 +1,17 @@
+<header class="app-header pad-70">
+    <div class="header-content">
+        <div class="logo" (click)="goHome()" style="cursor: pointer">
+            <img ngSrc="./assets/logo.png" priority width="32" height="32" alt="Kipper Logo"/> 
+            <span>KIPPER</span>
+        </div>
+        <nav>
+            <a (click)="scrollTo('solutions')" href="javascript:void(0)">Soluções</a>
+            <a (click)="scrollTo('performance')" href="javascript:void(0)">Performance</a>
+            <a (click)="scrollTo('security')" href="javascript:void(0)">Segurança</a>
+            <a (click)="scrollTo('pricing')" href="javascript:void(0)">Preços</a>
+        </nav>
+        <div class="header-actions">
+            <btn-primary (submit)="scrollToNewsletter()" btn-text="Falar com Especialista" variant="primary"></btn-primary>
+        </div>
+    </div>
+</header>

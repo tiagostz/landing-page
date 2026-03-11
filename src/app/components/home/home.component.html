@@ -1,0 +1,216 @@
+<app-header></app-header>
+<main>
+    <div class="bg-glow"></div>
+    
+    @if (navService.activeSection() === 'home') {
+        <section class="hero-section pad-70">
+            <div class="hero-content">
+                <div class="badge">
+                    <span>Novo</span>
+                    <p>Consultoria 2.0 agora disponível</p>
+                </div>
+                <h1>Escalabilidade que <span>impulsiona</span> seu negócio</h1>
+                <p class="subtitle">Ajudamos empresas de tecnologia a construir sistemas resilientes, seguros e prontos para o próximo milhão de usuários.</p>
+                <div class="hero-actions">
+                    <btn-primary (submit)="scrollTo('newsletter')" btn-text="Começar Agora" variant="primary"></btn-primary>
+                    <btn-primary (submit)="scrollTo('solutions')" btn-text="Ver Cases" variant="secondary"></btn-primary>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="val">99.9%</span>
+                        <span class="lab">Uptime Garantido</span>
+                    </div>
+                    <div class="stat">
+                        <span class="val">10x</span>
+                        <span class="lab">Mais Performance</span>
+                    </div>
+                    <div class="stat">
+                        <span class="val">24/7</span>
+                        <span class="lab">Suporte Especializado</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="abstract-shape">
+                    <div class="shape-1"></div>
+                    <div class="shape-2"></div>
+                    <div class="shape-3"></div>
+                </div>
+            </div>
+        </section>
+    }
+
+    @if (navService.activeSection() === 'solutions') {
+        <section id="solutions" class="features-section pad-70">
+            <div class="section-header">
+                <span class="sub">Nossas Soluções</span>
+                <h2>Estratégia e Arquitetura</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🚀</div>
+                    <h3>Arquitetura Cloud</h3>
+                    <p>Migração e otimização para AWS, Google Cloud e Azure com foco em escalabilidade horizontal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📈</div>
+                    <h3>Data Engineering</h3>
+                    <p>Pipelines de dados escaláveis para análise em tempo real e tomada de decisão estratégica.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🏗️</div>
+                    <h3>DevOps & CI/CD</h3>
+                    <p>Automação completa do ciclo de vida de software para entregas rápidas e seguras.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📱</div>
+                    <h3>Modernização de Apps</h3>
+                    <p>Transformação de sistemas legados em microsserviços modernos e resilientes.</p>
+                </div>
+            </div>
+        </section>
+    }
+
+    @if (navService.activeSection() === 'performance') {
+        <section id="performance" class="performance-section pad-70">
+            <div class="section-header">
+                <span class="sub">Performance</span>
+                <h2>Velocidade que gera resultados</h2>
+            </div>
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <div class="icon">⚡</div>
+                    <h3>Otimização de Query</h3>
+                    <p>Redução drástica na latência de banco de dados através de indexação e tunning fino.</p>
+                </div>
+                <div class="performance-card">
+                    <div class="icon">📦</div>
+                    <h3>Caching Estratégico</h3>
+                    <p>Implementação de camadas de cache (Redis/Memcached) para aliviar a carga do servidor.</p>
+                </div>
+                <div class="performance-card">
+                    <div class="icon">🌐</div>
+                    <h3>CDN & Edge</h3>
+                    <p>Distribuição global de conteúdo para garantir que seu app seja rápido em qualquer lugar.</p>
+                </div>
+            </div>
+        </section>
+    }
+
+    @if (navService.activeSection() === 'security') {
+        <section id="security" class="security-section pad-70">
+            <div class="section-header">
+                <span class="sub">Segurança</span>
+                <h2>Proteção total para seus dados</h2>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="icon">🔒</div>
+                    <h3>Criptografia de Ponta</h3>
+                    <p>Dados protegidos em repouso e em trânsito com os mais altos padrões da indústria.</p>
+                </div>
+                <div class="security-card">
+                    <div class="icon">📜</div>
+                    <h3>Compliance & Auditoria</h3>
+                    <p>Implementação de normas ISO 27001, SOC2 e LGPD para garantir conformidade total.</p>
+                </div>
+                <div class="security-card">
+                    <div class="icon">🕵️</div>
+                    <h3>Monitoramento 24/7</h3>
+                    <p>Sistemas de detecção de intrusão e resposta a incidentes em tempo real.</p>
+                </div>
+            </div>
+        </section>
+    }
+
+    @if (navService.activeSection() === 'pricing') {
+        <section id="pricing" class="pricing-section pad-70">
+            <div class="section-header">
+                <span class="sub">Preços</span>
+                <h2>Planos flexíveis para cada etapa</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="tier">Starter</div>
+                    <div class="price">R$ 2.500<span>/mês</span></div>
+                    <ul class="features">
+                        <li>Consultoria Cloud Básica</li>
+                        <li>Suporte em Horário Comercial</li>
+                        <li>1 Auditoria de Segurança/Ano</li>
+                    </ul>
+                    <btn-primary (submit)="scrollTo('newsletter')" btn-text="Escolher Plano" variant="secondary"></btn-primary>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Mais Popular</div>
+                    <div class="tier">Professional</div>
+                    <div class="price">R$ 5.000<span>/mês</span></div>
+                    <ul class="features">
+                        <li>Arquitetura de Alta Disponibilidade</li>
+                        <li>Suporte 24/7 Prioritário</li>
+                        <li>Auditorias Trimestrais</li>
+                        <li>Otimização de Performance</li>
+                    </ul>
+                    <btn-primary (submit)="scrollTo('newsletter')" btn-text="Escolher Plano" variant="primary"></btn-primary>
+                </div>
+                <div class="pricing-card">
+                    <div class="tier">Enterprise</div>
+                    <div class="price">Sob Consulta</div>
+                    <ul class="features">
+                        <li>Infraestrutura Dedicada</li>
+                        <li>Gerente de Conta Exclusivo</li>
+                        <li>SLA de 99.99%</li>
+                        <li>Customização Total</li>
+                    </ul>
+                    <btn-primary (submit)="scrollTo('newsletter')" btn-text="Falar com Vendas" variant="secondary"></btn-primary>
+                </div>
+            </div>
+        </section>
+    }
+
+    @if (navService.activeSection() === 'home') {
+        <section class="cta-banner pad-70">
+            <div class="banner-content">
+                <h2>Pronto para o próximo nível?</h2>
+                <p>Junte-se a centenas de empresas que já transformaram sua infraestrutura conosco.</p>
+                <btn-primary (submit)="scrollTo('newsletter')" btn-text="Agendar Diagnóstico" variant="primary"></btn-primary>
+            </div>
+        </section>
+
+        <newsletter-form id="newsletter"></newsletter-form>
+    }
+
+    <footer class="footer-section pad-70">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img ngSrc="./assets/logo.png" width="24" height="24" alt="Logo"/>
+                    <span>KIPPER</span>
+                </div>
+                <p>Construindo o futuro da infraestrutura de software.</p>
+            </div>
+            <div class="footer-nav">
+                <div class="nav-col">
+                    <h4>Produto</h4>
+                    <a (click)="scrollTo('solutions')" href="javascript:void(0)">Soluções</a>
+                    <a (click)="scrollTo('performance')" href="javascript:void(0)">Performance</a>
+                    <a (click)="scrollTo('pricing')" href="javascript:void(0)">Preços</a>
+                    <a (click)="scrollTo('security')" href="javascript:void(0)">Segurança</a>
+                </div>
+                <div class="nav-col">
+                    <h4>Empresa</h4>
+                    <a href="#">Sobre</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Carreiras</a>
+                </div>
+                <div class="nav-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Kipper Consultoria. Todos os direitos reservados. | Desenvolvido por Tiago dos Santos</p>
+        </div>
+    </footer>
+</main>

@@ -1,0 +1,49 @@
+@import "../../../color-variables.scss";
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    &.primary {
+        color: white;
+        background: $primary-color;
+        box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+
+        &:hover {
+            background: $secondary-color;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+
+    &.secondary {
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+        border: 1px solid $border-color;
+        backdrop-filter: blur(4px);
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+}
